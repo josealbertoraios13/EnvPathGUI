@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "2ZVRDjt1WIw=",
+  "success": true,
+  "projectFilePath": "/media/jose_alberto/SS2.11/GitHub/c#-dotnet/EnvPathGUI/EnvPathGUI.csproj",
+  "expectedPackageFiles": [
+    "/home/jose_alberto/.nuget/packages/atksharp/3.24.24.95/atksharp.3.24.24.95.nupkg.sha512",
+    "/home/jose_alberto/.nuget/packages/cairosharp/3.24.24.95/cairosharp.3.24.24.95.nupkg.sha512",
+    "/home/jose_alberto/.nuget/packages/gdksharp/3.24.24.95/gdksharp.3.24.24.95.nupkg.sha512",
+    "/home/jose_alberto/.nuget/packages/giosharp/3.24.24.95/giosharp.3.24.24.95.nupkg.sha512",
+    "/home/jose_alberto/.nuget/packages/glibsharp/3.24.24.95/glibsharp.3.24.24.95.nupkg.sha512",
+    "/home/jose_alberto/.nuget/packages/gtksharp/3.24.24.95/gtksharp.3.24.24.95.nupkg.sha512",
+    "/home/jose_alberto/.nuget/packages/pangosharp/3.24.24.95/pangosharp.3.24.24.95.nupkg.sha512"
+  ],
+  "logs": []
+}
