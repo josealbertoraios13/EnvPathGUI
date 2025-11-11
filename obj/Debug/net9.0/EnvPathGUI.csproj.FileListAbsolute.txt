@@ -21,3 +21,4 @@
 /media/jose_alberto/SS2.11/GitHub/c#-dotnet/EnvPathGUI/obj/Debug/net9.0/EnvPathGUI.pdb
 /media/jose_alberto/SS2.11/GitHub/c#-dotnet/EnvPathGUI/obj/Debug/net9.0/EnvPathGUI.genruntimeconfig.cache
 /media/jose_alberto/SS2.11/GitHub/c#-dotnet/EnvPathGUI/obj/Debug/net9.0/ref/EnvPathGUI.dll
+/media/jose_alberto/SS2.11/GitHub/c#-dotnet/EnvPathGUI/obj/Debug/net9.0/EnvPathGUI.sourcelink.json

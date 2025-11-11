@@ -10,10 +10,10 @@ public class Program
         Application.Init();
 
         var cssProvider = new CssProvider();
-        cssProvider.LoadFromPath("style.css");
+        cssProvider.LoadFromPath("ui/style/style.css");
         StyleContext.AddProviderForScreen(Gdk.Screen.Default, cssProvider, (uint)StyleProviderPriority.Application);
 
-        var window = new WindowConfig("Environment Path GUI");
+        var window = new MainWindow("Environment Path GUI");
         window.ShowAll();
 
         Application.Run();
