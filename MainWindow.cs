@@ -10,10 +10,9 @@ public class MainWindow : Window
     private Box mainBox = new Box(Orientation.Vertical, 5);
     public MainWindow(string title) : base(title)
     {
-        SetDefaultSize(500, 600);
-        SetSizeRequest(500, 600);
         Resizable = false;
 
+        mainBox.StyleContext.AddClass("main-box");
         Add(mainBox);
 
         DeleteEvent += (o, args) => Application.Quit();
@@ -31,18 +30,14 @@ public class MainWindow : Window
 
     private void ConfigContent()
     {
-        var localLabel = new Label("Local Path");
-        localLabel.Xalign = 0.1f;
+        var label = new Label("Paths");
+        label.Xalign = 0;
 
-        var localButtonBox = new ButtonsBox();
+        var buttonBox = new ButtonsBox();
+        buttonBox.StyleContext.AddClass("buttons-box");
 
-        var localScrollBox = new ScrollBox();
+        var scrollBox = new ScrollBox();
 
-        var globalLabel = new Label("Global Path");
-        globalLabel.Xalign = 0.1f;
-
-        var globalButtonBox = new ButtonsBox();
-
-        AddWidget(localLabel, localButtonBox, localScrollBox, globalLabel, globalButtonBox);
+        AddWidget(label, buttonBox, scrollBox);
     }
 }

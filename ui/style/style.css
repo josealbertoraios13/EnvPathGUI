@@ -1,3 +1,15 @@
-button{
-    background-color: transparent;
+.main-box{
+    padding: 10px;
+}
+
+.buttons-box{
+    padding: 0px;
+}
+
+.buttons-box button {
+    padding: 0px;
+}
+
+.scroll-box {
+    margin-bottom: 10px;
 }
