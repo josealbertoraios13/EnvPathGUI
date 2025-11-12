@@ -1,6 +1,5 @@
 using System;
 using System.Diagnostics;
-using System.IO;
 
 using Gtk;
 
@@ -8,10 +7,11 @@ namespace ui.scrollBox
 {
     public class ScrollBox : ScrolledWindow
     {
-        private Box mainBox = new Box(Orientation.Vertical, 5);
+        private static Box mainBox = new Box(Orientation.Vertical, 5);
+        private static Entry selectedItem =  new Entry();
         public ScrollBox()
         {
-            SetSizeRequest(500, 600);
+            SetSizeRequest(500, 650);
 
             ShadowType = ShadowType.In;
             HscrollbarPolicy = PolicyType.Automatic;
@@ -25,7 +25,7 @@ namespace ui.scrollBox
 
         public void UpdateContainer()
         {
-            if(mainBox.Children.Length > 0)
+            if (mainBox.Children.Length > 0)
             {
                 mainBox = new Box(Orientation.Vertical, 5);
             }
@@ -34,16 +34,42 @@ namespace ui.scrollBox
 
             foreach (var path in localPaths)
             {
-                var label = new Label(path);
-                label.Xalign = 0;
+                var item = new Entry(path);
+                item.Xalign = 0;
+                item.FocusInEvent += ScrollBox.SetSelectedItem;
 
-                mainBox.Add(label);
+                mainBox.Add(item);
                 mainBox.ShowAll();
             }
 
             Add(mainBox);
             ShowAll();
         }
+
+
+        public static void Create(object? sender, EventArgs e)
+        {
+            var item = new Entry();
+            item.Xalign = 0;
+
+            mainBox.Add(item);
+            mainBox.ShowAll();
+
+            item.GrabFocus();
+            item.FocusInEvent += SetSelectedItem;
+        }
+
+        public static void Remove(object? sender, EventArgs e)
+        {
+            mainBox.Remove(selectedItem);
+            mainBox.ShowAll();
+            selectedItem = new();
+        }
         
+        private static void SetSelectedItem(object? sender, EventArgs e)
+        {
+            if (sender != null)
+                selectedItem = (Entry)sender;
+        }
     }
 }
